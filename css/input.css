@@ -1,0 +1,53 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+	.container {
+		@apply max-w-[1240px];
+	}
+	body {
+		@apply relative font-plus text-white;
+	}
+	section {
+		@apply py-20 md:py-14 sm:py-10;
+	}
+
+	h1 {
+		@apply text-3xl font-medium;
+	}
+	p {
+		@apply text-[#ADB2B1];
+	}
+}
+@layer components {
+	/* Button */
+	.btn {
+		@apply flex max-w-fit items-center gap-2 rounded-full border border-primary bg-primary px-8 py-3 text-white transition-colors  hover:bg-green-900;
+	}
+	.btn-outline {
+		@apply flex max-w-fit items-center gap-2 rounded-full border border-primary bg-transparent px-8 py-3 text-primary transition-colors hover:bg-green-900 hover:text-white;
+	}
+
+	/* Section Title */
+	.section-title {
+		@apply text-[40px] font-bold leading-normal text-white sm:text-3xl;
+	}
+	.text-wrap {
+		text-wrap: balance;
+	}
+	.header.active {
+		@apply bg-green-900/30 backdrop-blur transition-colors sm:py-5;
+	}
+}
+
+@layer utilities {
+	/* Accrodion Styles */
+	.accordion-item.active > .accordion-content {
+		@apply block animate-fadeIn;
+	}
+
+	.accordion-item.active .accordion-img {
+		@apply rotate-180;
+	}
+}
